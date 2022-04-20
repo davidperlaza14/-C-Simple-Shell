@@ -37,7 +37,8 @@ After receiving a command, shell.c tokenizes it into words using " " as a delimi
 
 ## authors
 ````
-* david perlaza
+* david perlaza @davidperlaza14
+davidperlaza14@gmail.com
 
 * kevin ramirez @arkein17
 3884@holbertonschool.com
