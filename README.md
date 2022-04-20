@@ -35,7 +35,13 @@ After receiving a command, shell.c tokenizes it into words using " " as a delimi
 * If the first character of the command is none of a slash (\), dot (.), nor builtin, our shell searches each element of the PATH environmental variable for a directory containing an executable file by that name
 * If the first character of the command is a slash (\) or dot (.) or either of the above searches was successful, the shell executes the named program with any remaining given arguments in a separate execution environment.
 
+## authors
+````
+* david perlaza
 
+* kevin ramirez @arkein17
+3884@holbertonschool.com
+````
 
 
 
