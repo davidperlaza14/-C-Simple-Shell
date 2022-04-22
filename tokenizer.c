@@ -18,8 +18,11 @@ char **tokenizer(char *buffer, char *dlimiter)
 	{
 		return (NULL);
 	}
-
-	tokns = malloc(sizeof(char *) * mSize);
+	while (1)
+	{
+		tokns = malloc(sizeof(char *) * mSize);
+		free(tokns);
+	}
 
 	if ((*buffer == '\n' || *buffer == ' ')   && *(buffer + 1) == '\0')
 	{
@@ -33,10 +36,10 @@ char **tokenizer(char *buffer, char *dlimiter)
 		{
 			tokns = realloc(tokns, sizeof(char *) * (i + 1));
 			if (tokns == NULL)
-				free(tokns);
-			return (NULL);
+				return (NULL);
 		}
 		buffer = NULL;
+		free(tokns);
 	}
 	return (tokns);
 }
