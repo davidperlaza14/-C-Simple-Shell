@@ -33,7 +33,8 @@ char **tokenizer(char *buffer, char *dlimiter)
 		{
 			tokns = realloc(tokns, sizeof(char *) * (i + 1));
 			if (tokns == NULL)
-				return (NULL);
+				free(tokns);
+			return (NULL);
 		}
 		buffer = NULL;
 	}
